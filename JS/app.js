@@ -19,10 +19,7 @@ console.log('javaScript connected properly');
  * Great to have comments before crucial code sections within the procedure.
 */
 
-/**
- * Define Global Variables
- * 
-*/
+
 // Defining Global Variables
 const navbarMenu = document.querySelector('.navbar_menu');
 const navbarList = document.getElementById('navbar__list');
@@ -33,8 +30,19 @@ const sections = document.querySelectorAll('section');
  * Start Helper Functions
  * 
 */
+//Building the Navbar and link properly to their respective sections
 
-
+const buildNav = () => {
+    sections.forEach(section => {   
+        const newElement = document.createElement('li');
+        const sectionId = section.id;
+        const sectionData = section.dataset.nav
+        newElement.innerHTML = `<li><a class='menu__link' href='#${sectionId}'>${sectionData}</a></li>`;
+        navbarList.appendChild(newElement);
+        
+    })
+}
+buildNav();
 
 /**
  * End Helper Functions
