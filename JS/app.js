@@ -1,3 +1,4 @@
+console.log('javaScript connected properly');
 /**
  * 
  * Manipulating the DOM exercise.
