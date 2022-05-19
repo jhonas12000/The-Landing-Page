@@ -23,7 +23,10 @@ console.log('javaScript connected properly');
  * Define Global Variables
  * 
 */
-
+// Defining Global Variables
+const navbarMenu = document.querySelector('.navbar_menu');
+const navbarList = document.getElementById('navbar__list');
+const sections = document.querySelectorAll('section');
 
 /**
  * End Global Variables
